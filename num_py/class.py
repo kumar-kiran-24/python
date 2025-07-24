@@ -11,4 +11,3 @@ class b(k):
         print("hello")
 a=k("kian","29-11-2004")
 a.print()
-a.print()

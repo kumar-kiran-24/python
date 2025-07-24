@@ -23,3 +23,10 @@ print(arr7.shape) #return (dienssions,lastly_give_the_elments)
 
 arr8=np.array([1,2,3,4],ndmin=5)#create the required numbers of dimmesional array using the nadmin
 print(arr8.shape)#(1,1,1,1,4)
+
+#array reshape
+arr9=np.array([1,2,3,4,5,6])
+arr10=arr9.reshape(2,3)#dimesions,elments
+print(arr10)
+
+#
