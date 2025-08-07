@@ -29,10 +29,51 @@ dt=torch.tensor([.8,.9,.8])
 print(dt.dtype)#return the data type(float32)
 #parameters
 datat=torch.tensor([0.9,0.8],dtype=torch.float16,
-                   device=None,#in which twnsor is on
+                   device=None,#in which device tensor is on
                    requires_grad=False
                    )
 print(datat.dtype)
+datat1=torch.tensor([1,2,3],dtype=torch.int32)
+print(f"Device tensor is on{datat1.device}")    
+
+#manipulating Tensors(Tensors Operations)
+tensor=torch.tensor([1,2,3],dtype=torch.int16)
+addition=tensor+10#retuen[11,12,13]
+add_method=torch.add(tensor,10)
+substract=tensor-1#return[0,1,2]
+#like method mul,div,sub
+
+#Matrix mulptiplication
+tensor2=torch.tensor([[[1,2,3],
+                     [1,2,3],
+                     [1,2,3]]])
+matrix_mul=torch.matmul(tensor2,tensor2)
+print(matrix_mul)
+
+#methods in tensor
+print(torch.max(tensor))#max method
+print(torch.mean(tensor.to(torch.float32)))  #mean method
+print(torch.sum(tensor))#sum method
+
+#postion of min and max values
+print(tensor.argmin())#return the postion of the mean value
+print(tensor.argmax())#return the postion of the max value
+
+# #reshaping ,stacking,squeezing and unsqueezing in tensors
+tensor=torch.tensor([1,2,3,4,5,6,7,8],dtype=torch.int16)
+reshaped=tensor.reshape(2,4)
+print(reshaped)
+
+#stacks
+stack_=torch.stack([1,2,3,4])
+
+   
+
+
+
+
+
+
 
 
 
