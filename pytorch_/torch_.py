@@ -65,18 +65,39 @@ reshaped=tensor.reshape(2,4)
 print(reshaped)
 
 #stacks
-stack_=torch.stack([1,2,3,4])
+stack_=torch.stack([tensor,tensor,tensor])
+print(stack_)
 
-   
+#squeeze-remove all single dimesions from a target tensor
+print(f"squezed tensor:{stack_.squeeze()}")
+
+#unsqueezing add the single dimessions to target tensor
+print(f"unsqueezed:{stack_.unsqueeze()}")
+
+#permuting-rearranges the dimensions of a targets tensors in specifed order
+x=torch.rand(size=(224,224,3))#(hieght,width,color_chanels)
+x_permute=x.permute([2,0,1])
+print(f"orginal size of x:{x.shape}")
+print(f"perumte of x{x_permute.shape}")
+
+#indexing in pytorch
+tensor2=torch.arange(1,10).reshape(1,3,3)
+print(tensor2)
+print(f"indexing:{tensor2[0][0][0]}")
+print(f"indexing {tensor2[0][0]}")
+
+#Reproductivity in pytorch
+#Random Seed-choose the same random numbers when every time code wiil excute
+torch.manual_seed(42)
+random_a=torch.rand(3,4)
+random_b=torch.rand(3,4)
+print(random_a==random_b)#retuen false
+print(random_a)
 
 
+torch.manual_seed(42)
+random_c=torch.rand(3,4)
 
-
-
-
-
-
-
-              
-
-
+torch.manual_seed(42)
+random_d=torch.rand(3,4)
+print(random_c==random_d)#return true
