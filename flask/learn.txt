@@ -1,0 +1,6 @@
+###Jinja 2 Template
+
+{{}} -->expression to print output in hrml
+
+{%.....%} -----> conditions , fro loops
+{#..#} ----> comments

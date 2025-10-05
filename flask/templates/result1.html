@@ -1,0 +1,17 @@
+<html>
+    <h2>
+        Result
+    </h2>
+</html>
+<body>
+    <table border=2> 
+        {%for key , value in result.items()%}
+        <tr>
+            {#this is comment section#}
+            <th>{{key}} </th>
+            <th>{{value}} </th>
+        </tr>
+        {% endfor %}
+
+    </table>
+</body>
